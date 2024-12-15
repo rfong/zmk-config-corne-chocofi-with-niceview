@@ -8,74 +8,85 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    macros {
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+    keymap {
+        compatible = "zmk,keymap";
 
-                layer0 {
-                  display-name = "Base";
+        layer0 {
+            display-name = "Base";
 // LAYER 0
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | mo1 | SPC |   | ENT | mo2 | ALT |
-                        bindings = <
-   &trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P      &trans
-   &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI   &trans 
-   &trans &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH   &trans
-               &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
+            bindings = <
+&trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P      &trans
+&trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI   &trans 
+&trans &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH   &trans
+            &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+            >;
+        };
 
-                layer1 {
-                  display-name = "Layer 1";
+        layer1 {
+            display-name = "Layer 1";
 // LAYER 1 - num, navigation, symbols
 // -----------------------------------------------------------------------------------------
 // | |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | |
 // | | ESC | ENT | PGUP| PGDN|     |   | LEFT| DOWN| UP  |RIGHT|  -  | |
 // | |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  .  |  /  | |
 //               |     |     |     |   |     | mo3 |    |
-                        bindings = <
-   &trans &kp N1   &kp N2  &kp N3    &kp N4    &kp N5     &kp N6    &kp N7   &kp N8   &kp N9    &kp N0    &trans
-   &trans &kp ESC  &kp RET &kp PG_UP &kp PG_DN &trans     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp MINUS &trans
-   &trans &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET &kp AMPS &kp STAR &kp DOT   &kp SLASH &trans
-                                    &trans &trans &trans  &trans &mo 3 &trans
-                        >;
-                };
+            bindings = <
+&trans &kp N1   &kp N2  &kp N3    &kp N4    &kp N5     &kp N6    &kp N7   &kp N8   &kp N9    &kp N0    &trans
+&trans &kp ESC  &kp RET &kp PG_UP &kp PG_DN &trans     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp MINUS &trans
+&trans &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET &kp AMPS &kp STAR &kp DOT   &kp SLASH &trans
+                                 &trans &trans &trans  &trans &mo 3 &trans
+            >;
+        };
 
 // | | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |BTCLR| |
 //   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &bt BT_CLR &trans
 
-                layer2 {
-                  display-name = "Layer 2";
+        layer2 {
+             display-name = "Layer 2";
 // LAYER 2 - LH shortcuts, RH vim
 // -----------------------------------------------------------------------------------------
 // | |     |     |     |     |     |   | ENT |  ;  |  :  |  -  |  =  | |
 // | | GUI | ALT | CTL | TAB | CAPS|   |  '  |  `  | SFT |  [  |  ]  | |
 // | |     |     |     |     |     |   | BSPC|  \  | `|` |  (  |  )  | |
 //               |     | mo3 |     |   |     |     |     |
-                        bindings = <
-   &trans &trans   &trans   &trans    &trans   &trans     &kp RET   &kp SEMI  &kp COLON &kp MINUS &kp EQUAL &trans
-   &trans &kp LGUI &kp LALT &kp LCTRL &kp TAB  &kp CAPS   &kp SQT   &kp GRAVE &kp RSHFT &kp LBKT  &kp RBKT  &trans
-   &trans &trans   &trans   &trans    &trans   &trans     &kp BSPC  &kp BSLH  &kp PIPE  &kp LPAR  &kp RPAR  &trans
-                    	               &trans &mo 3 &trans  &trans &trans &trans
-                        >;
-                };
+             bindings = <
+&trans &trans   &trans   &trans    &trans   &trans     &kp RET   &kp SEMI  &kp COLON &kp MINUS &kp EQUAL &trans
+&trans &kp LGUI &kp LALT &kp LCTRL &kp TAB  &kp CAPS   &kp SQT   &kp GRAVE &kp RSHFT &kp LBKT  &kp RBKT  &trans
+&trans &trans   &trans   &trans    &trans   &trans     &kp BSPC  &kp BSLH  &kp PIPE  &kp LPAR  &kp RPAR  &trans
+                                  &trans &mo 3 &trans  &trans &trans &trans
+             >;
+        };
 
-                layer3 {
-                  display-name = "Layer 3";
+        layer3 {
+             display-name = "Layer 3";
 // LAYER 3 - media and extras
 // -----------------------------------------------------------------------------------------
 // | |     |     | VOLD| VOLU| MUTE|   |     |     |     |     |     | |
 // | |     |     | PREV| NEXT| PLAY|   |     |     |     |     |     | |
 // | | BRID| BRIU| SFT | ALT |     |   |     |     |     |     |BTCLR| |
 //               |     |     |     |   |     |     |     |
-                        bindings = <
-   &trans &trans       &trans       &kp K_VOL_DN &kp K_VOL_UP &kp K_MUTE  &trans &trans &trans &trans &trans     &trans
-   &trans &trans       &trans       &kp K_PREV   &kp K_NEXT   &kp K_PP    &trans &trans &trans &trans &trans     &trans
-   &trans &kp C_BRI_DN &kp C_BRI_UP &kp LSHFT    &kp LALT     &trans      &trans &trans &trans &trans &bt BT_CLR &trans
-                                                    &trans &trans &trans  &trans &trans &trans
-                        >;
-                };
+             bindings = <
+&trans &trans       &trans       &kp K_VOL_DN &kp K_VOL_UP &kp K_MUTE  &trans &trans &trans &trans &trans     &trans
+&trans &trans       &trans       &kp K_PREV   &kp K_NEXT   &kp K_PP    &trans &trans &trans &trans &trans     &trans
+&trans &kp C_BRI_DN &kp C_BRI_UP &kp LSHFT    &kp LALT     &trans      &trans &trans &trans &trans &bt BT_CLR &trans
+                                                 &trans &trans &trans  &trans &trans &trans
+             >;
         };
+   };
 };
