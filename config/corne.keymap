@@ -61,25 +61,25 @@
         VSAV: VSAV {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp SEMI &kp W &kp RET>;
+            bindings = <&macro_tap &kp COLON &kp W &kp RET>;
         };
         // Vim quit
         VQUI: VQUI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp SEMI &kp Q &kp RET>;
+            bindings = <&macro_tap &kp COLON &kp Q &kp RET>;
         };
         // Vim split
         VSP: VSP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp SEMI &kp S &kp S &kp SPACE>;
+            bindings = <&macro_tap &kp COLON &kp S &kp S &kp SPACE>;
         };
         // Vim insert tabs
         VTAB: VTAB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp S &kp FSLH &kp CARET &kp SPACE &kp SPACE &kp FSLH>;
+            bindings = <&macro_tap &kp COLON &kp S &kp FSLH &kp CARET &kp SPACE &kp SPACE &kp FSLH>;
         };
     };
 
@@ -90,13 +90,13 @@
             display-name = "Base";
 // LAYER 0
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | |
+// | |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  '  | |
+// | |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | |
 //            | CTL/TAB | mo1 | GUI/ENT |   | SFT/SPC | mo2 | ALT/ESC |
             bindings = <
 &trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P      &trans
-&trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI   &trans 
+&trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SQT    &trans
 &trans &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH   &trans
    &mt LCTRL TAB &mo 1 &mt LGUI RET    &mt RSHFT SPACE &mo 2 &mt RALT ESC
             >;
