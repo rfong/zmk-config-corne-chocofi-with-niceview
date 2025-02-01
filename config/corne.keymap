@@ -73,7 +73,7 @@
         VSP: VSP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp COLON &kp S &kp S &kp SPACE>;
+            bindings = <&macro_tap &kp COLON &kp S &kp P &kp SPACE>;
         };
         // Vim insert tabs
         VTAB: VTAB {
