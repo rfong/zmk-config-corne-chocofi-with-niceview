@@ -1,0 +1,160 @@
+/* Japanese characters 
+ * Of the archaic kana, decided not to include ones that would shift from a 
+ * non-archaic kana, to avoid typos.
+ */
+
+// Punctuation
+
+ZMK_UNICODE_SINGLE(ja_space, 	N3,N0,N0,N0) // ⟨　⟩ 3000
+ZMK_UNICODE_SINGLE(ja_comma, 	N3,N0,N0,N1) // 、 3001
+ZMK_UNICODE_SINGLE(ja_stop, 	N3,N0,N0,N2) // 。 3002
+ZMK_UNICODE_PAIR(ja_lyama, 	N3,N0,N0,N8, N3,N0,N0, A) // 〈 3008, 《 300A
+ZMK_UNICODE_PAIR(ja_ryama, 	N3,N0,N0,N9, N3,N0,N0, B) // 〉 3009, 》 300B
+ZMK_UNICODE_PAIR(ja_lquot, 	N3,N0,N0, C, N3,N0,N0, E) // 「 300C, 『 300E
+ZMK_UNICODE_PAIR(ja_rquot, 	N3,N0,N0, D, N3,N0,N0, F) // 」 300D, 』 300F
+ZMK_UNICODE_SINGLE(ja_hyphen, 	N3,N0, A,N0) // ゠ 30A0
+ZMK_UNICODE_SINGLE(ja_nami, 	N3,N0,N1, C) // 〜 301C
+ZMK_UNICODE_SINGLE(ja_dot, 	N3,N0, F, B) // ・ 30FB
+ZMK_UNICODE_SINGLE(ja_excl, 	 F, F,N0,N1) // ！ FF01
+ZMK_UNICODE_SINGLE(ja_ques, 	 F, F,N1, F) // ？ FF1F
+ZMK_UNICODE_SINGLE(ja_colo, 	 F, F,N1, A) // ： FF1A
+ZMK_UNICODE_SINGLE(ja_semi, 	 F, F,N1, B) // ； FF1B
+ZMK_UNICODE_SINGLE(ja_yen, 	 F, F, E,N5) // ￥ FFE5
+
+// Digits
+
+ZMK_UNICODE_SINGLE(ja_0, 	 F, F,N1,N0) // ０ FF10
+ZMK_UNICODE_SINGLE(ja_1, 	 F, F,N1,N1) // １ FF11
+ZMK_UNICODE_SINGLE(ja_2, 	 F, F,N1,N2) // ２ FF12
+ZMK_UNICODE_SINGLE(ja_3, 	 F, F,N1,N3) // ３ FF13
+ZMK_UNICODE_SINGLE(ja_4, 	 F, F,N1,N4) // ４ FF14
+ZMK_UNICODE_SINGLE(ja_5, 	 F, F,N1,N5) // ５ FF15
+ZMK_UNICODE_SINGLE(ja_6, 	 F, F,N1,N6) // ６ FF16
+ZMK_UNICODE_SINGLE(ja_7, 	 F, F,N1,N7) // ７ FF17
+ZMK_UNICODE_SINGLE(ja_8, 	 F, F,N1,N8) // ８ FF18
+ZMK_UNICODE_SINGLE(ja_9, 	 F, F,N1,N9) // ９ FF19
+
+// Hiragana
+
+ZMK_UNICODE_SINGLE(ja_a, 	N3,N0,N4,N2) // あ 3042
+ZMK_UNICODE_SINGLE(ja_i, 	N3,N0,N4,N4) // い 3044
+ZMK_UNICODE_SINGLE(ja_u, 	N3,N0,N4,N6) // う 3046
+ZMK_UNICODE_SINGLE(ja_e, 	N3,N0,N4,N8) // え 3048
+ZMK_UNICODE_SINGLE(ja_o, 	N3,N0,N4, A) // お 304A
+ZMK_UNICODE_SINGLE(ja_tsu_sm, 	N3,N0,N6,N3) // っ 3063
+ZMK_UNICODE_SINGLE(ja_ya_sm, 	N3,N0,N8,N3) // ゃ 3083
+ZMK_UNICODE_SINGLE(ja_yu_sm, 	N3,N0,N8,N5) // ゅ 3085
+ZMK_UNICODE_SINGLE(ja_yo_sm, 	N3,N0,N8,N7) // ょ 3087
+ZMK_UNICODE_SINGLE(ja_wa_sm, 	N3,N0,N8, E) // ゎ 308E
+ZMK_UNICODE_PAIR(ja_ka, 	N3,N0,N4, B, N3,N0,N4, C) // か 304B, が 304C
+ZMK_UNICODE_PAIR(ja_ki, 	N3,N0,N4, D, N3,N0,N4, E) // き 304D, ぎ 304E
+ZMK_UNICODE_PAIR(ja_ku, 	N3,N0,N4, F, N3,N0,N5,N0) // く 304F, ぐ 3050
+ZMK_UNICODE_PAIR(ja_ke, 	N3,N0,N5,N1, N3,N0,N5,N2) // け 3051, げ 3052
+ZMK_UNICODE_PAIR(ja_ko, 	N3,N0,N5,N3, N3,N0,N5,N4) // こ 3053, ご 3054
+ZMK_UNICODE_PAIR(ja_sa, 	N3,N0,N5,N5, N3,N0,N5,N6) // さ 3055, ざ 3056
+ZMK_UNICODE_PAIR(ja_shi, 	N3,N0,N5,N7, N3,N0,N5,N8) // し 3057, じ 3058
+ZMK_UNICODE_PAIR(ja_su, 	N3,N0,N5,N9, N3,N0,N5, A) // す 3059, ず 305A
+ZMK_UNICODE_PAIR(ja_se, 	N3,N0,N5, B, N3,N0,N5, C) // せ 305B, ぜ 305C
+ZMK_UNICODE_PAIR(ja_so, 	N3,N0,N5, D, N3,N0,N5, E) // そ 305D, ぞ 305E
+ZMK_UNICODE_PAIR(ja_ta, 	N3,N0,N5, F, N3,N0,N6,N0) // た 305F, だ 3060
+ZMK_UNICODE_PAIR(ja_chi, 	N3,N0,N6,N1, N3,N0,N6,N2) // ち 3061, ぢ 3062
+ZMK_UNICODE_PAIR(ja_tsu, 	N3,N0,N6,N4, N3,N0,N6,N5) // つ 3064, づ 3065
+ZMK_UNICODE_PAIR(ja_te, 	N3,N0,N6,N6, N3,N0,N6,N7) // て 3066, で 3067
+ZMK_UNICODE_PAIR(ja_to, 	N3,N0,N6,N8, N3,N0,N6,N9) // と 3068, ど 3069
+ZMK_UNICODE_SINGLE(ja_na, 	N3,N0,N6, A) // な 306A
+ZMK_UNICODE_SINGLE(ja_ni, 	N3,N0,N6, B) // に 306B
+ZMK_UNICODE_SINGLE(ja_nu, 	N3,N0,N6, C) // ぬ 306C
+ZMK_UNICODE_SINGLE(ja_ne, 	N3,N0,N6, D) // ね 306D
+ZMK_UNICODE_SINGLE(ja_no, 	N3,N0,N6, E) // の 306E
+ZMK_UNICODE_PAIR(ja_ha, 	N3,N0,N6, F, N3,N0,N7,N0) // は 306F, ば 3070
+ZMK_UNICODE_SINGLE(ja_pa, 	N3,N0,N7,N1) // ぱ 3071
+ZMK_UNICODE_PAIR(ja_hi, 	N3,N0,N7,N2, N3,N0,N7,N3) // ひ 3072, び 3073
+ZMK_UNICODE_SINGLE(ja_pi, 	N3,N0,N7,N4) // ぴ 3074
+ZMK_UNICODE_PAIR(ja_fu, 	N3,N0,N7,N5, N3,N0,N7,N6) // ふ 3075, ぶ 3076
+ZMK_UNICODE_SINGLE(ja_pu, 	N3,N0,N7,N7) // ぷ 3077
+ZMK_UNICODE_PAIR(ja_he, 	N3,N0,N7,N8, N3,N0,N7,N9) // へ 3078, べ 3079
+ZMK_UNICODE_SINGLE(ja_pe, 	N3,N0,N7, A) // ぺ 307A
+ZMK_UNICODE_PAIR(ja_ho, 	N3,N0,N7, B, N3,N0,N7, C) // ほ 307B, ぼ 307C
+ZMK_UNICODE_SINGLE(ja_po, 	N3,N0,N7, D) // ぽ 307D
+ZMK_UNICODE_SINGLE(ja_ma, 	N3,N0,N7, E) // ま 307E
+ZMK_UNICODE_SINGLE(ja_mi, 	N3,N0,N7, F) // み 307F
+ZMK_UNICODE_SINGLE(ja_mu, 	N3,N0,N8,N0) // む 3080
+ZMK_UNICODE_SINGLE(ja_me, 	N3,N0,N8,N1) // め 3081
+ZMK_UNICODE_SINGLE(ja_mo, 	N3,N0,N8,N2) // も 3082
+ZMK_UNICODE_SINGLE(ja_ya, 	N3,N0,N8,N4) // や 3084
+ZMK_UNICODE_SINGLE(ja_yu, 	N3,N0,N8,N6) // ゆ 3086
+ZMK_UNICODE_SINGLE(ja_yo, 	N3,N0,N8,N8) // よ 3088
+ZMK_UNICODE_SINGLE(ja_ra, 	N3,N0,N8,N9) // ら 3089
+ZMK_UNICODE_SINGLE(ja_ri, 	N3,N0,N8, A) // り 308A
+ZMK_UNICODE_SINGLE(ja_ru, 	N3,N0,N8, B) // る 308B
+ZMK_UNICODE_SINGLE(ja_re, 	N3,N0,N8, C) // れ 308C
+ZMK_UNICODE_SINGLE(ja_ro, 	N3,N0,N8, D) // ろ 308D
+ZMK_UNICODE_SINGLE(ja_wa, 	N3,N0,N8, F) // わ 308F
+ZMK_UNICODE_SINGLE(ja_wi, 	N3,N0,N9,N0) // ゐ 3090
+ZMK_UNICODE_SINGLE(ja_we, 	N3,N0,N9,N1) // ゑ 3091
+ZMK_UNICODE_SINGLE(ja_wo, 	N3,N0,N9,N2) // を 3092
+ZMK_UNICODE_SINGLE(ja_n, 	N3,N0,N9,N3) // ん 3093
+ZMK_UNICODE_SINGLE(ja_vu, 	N3,N0,N9,N4) // ゔ 3094
+
+// Katakana
+
+ZMK_UNICODE_SINGLE(ja_kata_a, 	N3,N0, A,N2) // ア 30A2
+ZMK_UNICODE_SINGLE(ja_kata_i, 	N3,N0, A,N4) // イ 30A4
+ZMK_UNICODE_SINGLE(ja_kata_u, 	N3,N0, A,N6) // ウ 30A6
+ZMK_UNICODE_SINGLE(ja_kata_e, 	N3,N0, A,N8) // エ 30A8
+ZMK_UNICODE_SINGLE(ja_kata_o, 	N3,N0, A, A) // オ 30AA
+ZMK_UNICODE_SINGLE(ja_kata_tsu_sm, 	N3,N0, C,N3) // ッ 30C3
+ZMK_UNICODE_SINGLE(ja_kata_ya_sm, 	N3,N0, E,N3) // ャ 30E3
+ZMK_UNICODE_SINGLE(ja_kata_yu_sm, 	N3,N0, E,N5) // ュ 30E5
+ZMK_UNICODE_SINGLE(ja_kata_yo_sm, 	N3,N0, E,N7) // ョ 30E7
+ZMK_UNICODE_SINGLE(ja_kata_wa_sm, 	N3,N0, E, E) // ヮ  30EE
+ZMK_UNICODE_SINGLE(ja_kata_choonpu, 	N3,N0, F, C) // ー 30FC
+ZMK_UNICODE_PAIR(ja_kata_ka, 	N3,N0, A, B, N3,N0, A, C) // カ 30AB, ガ 30AC
+ZMK_UNICODE_PAIR(ja_kata_ki, 	N3,N0, A, D, N3,N0, A, E) // キ 30AD, ギ 30AE
+ZMK_UNICODE_PAIR(ja_kata_ku, 	N3,N0, A, F, N3,N0, B,N0) // ク 30AF, グ 30B0
+ZMK_UNICODE_PAIR(ja_kata_ke, 	N3,N0, B,N1, N3,N0, B,N2) // ケ 30B1, ゲ 30B2
+ZMK_UNICODE_PAIR(ja_kata_ko, 	N3,N0, B,N3, N3,N0, B,N4) // コ 30B3, ゴ 30B4
+ZMK_UNICODE_PAIR(ja_kata_sa, 	N3,N0, B,N5, N3,N0, B,N6) // サ 30B5, ザ 30B6
+ZMK_UNICODE_PAIR(ja_kata_shi, 	N3,N0, B,N7, N3,N0, B,N8) // シ 30B7, ジ 30B8
+ZMK_UNICODE_PAIR(ja_kata_su, 	N3,N0, B,N9, N3,N0, B, A) // ス 30B9, ズ 30BA
+ZMK_UNICODE_PAIR(ja_kata_se, 	N3,N0, B, B, N3,N0, B, C) // セ 30BB, ゼ 30BC
+ZMK_UNICODE_PAIR(ja_kata_so, 	N3,N0, B, D, N3,N0, B, E) // ソ 30BD, ゾ 30BE
+ZMK_UNICODE_PAIR(ja_kata_ta, 	N3,N0, B, F, N3,N0, C,N0) // タ 30BF, ダ 30C0
+ZMK_UNICODE_PAIR(ja_kata_chi, 	N3,N0, C,N1, N3,N0, C,N2) // チ 30C1, ヂ 30C2
+ZMK_UNICODE_PAIR(ja_kata_tsu, 	N3,N0, C,N4, N3,N0, C,N5) // ツ 30C4, ヅ 30C5
+ZMK_UNICODE_PAIR(ja_kata_te, 	N3,N0, C,N6, N3,N0, C,N7) // テ 30C6, デ 30C7
+ZMK_UNICODE_PAIR(ja_kata_to, 	N3,N0, C,N8, N3,N0, C,N9) // ト 30C8, ド 30C9
+ZMK_UNICODE_SINGLE(ja_kata_na, 	N3,N0, C, A) // ナ 30CA
+ZMK_UNICODE_SINGLE(ja_kata_ni, 	N3,N0, C, B) // ニ 30CB
+ZMK_UNICODE_SINGLE(ja_kata_nu, 	N3,N0, C, C) // ヌ 30CC
+ZMK_UNICODE_SINGLE(ja_kata_ne, 	N3,N0, C, D) // ネ 30CD
+ZMK_UNICODE_SINGLE(ja_kata_no, 	N3,N0, C, E) // ノ 30CE
+ZMK_UNICODE_PAIR(ja_kata_ha, 	N3,N0, C, F, N3,N0, D,N0) // ハ 30CF, バ 30D0
+ZMK_UNICODE_SINGLE(ja_kata_pa, 	N3,N0, D,N1) // パ 30D1
+ZMK_UNICODE_PAIR(ja_kata_hi, 	N3,N0, D,N2, N3,N0, D,N3) // ヒ 30D2, ビ 30D3
+ZMK_UNICODE_SINGLE(ja_kata_pi, 	N3,N0, D,N4) // ピ 30D4
+ZMK_UNICODE_PAIR(ja_kata_fu, 	N3,N0, D,N5, N3,N0, D,N6) // フ 30D5, ブ 30D6
+ZMK_UNICODE_SINGLE(ja_kata_pu, 	N3,N0, D,N7) // プ 30D7
+ZMK_UNICODE_PAIR(ja_kata_he, 	N3,N0, D,N8, N3,N0, D,N9) // ヘ 30D8, ベ 30D9
+ZMK_UNICODE_SINGLE(ja_kata_pe, 	N3,N0, D, A) // ペ 30DA
+ZMK_UNICODE_PAIR(ja_kata_ho, 	N3,N0, D, B, N3,N0, D, C) // ホ 30DB, ボ 30DC
+ZMK_UNICODE_SINGLE(ja_kata_po, 	N3,N0, D, D) // ポ 30DD
+ZMK_UNICODE_SINGLE(ja_kata_ma, 	N3,N0, D, E) // マ 30DE
+ZMK_UNICODE_SINGLE(ja_kata_mi, 	N3,N0, D, F) // ミ 30DF
+ZMK_UNICODE_SINGLE(ja_kata_mu, 	N3,N0, E,N0) // ム 30E0
+ZMK_UNICODE_SINGLE(ja_kata_me, 	N3,N0, E,N1) // メ 30E1
+ZMK_UNICODE_SINGLE(ja_kata_mo, 	N3,N0, E,N2) // モ 30E2
+ZMK_UNICODE_SINGLE(ja_kata_ya, 	N3,N0, E,N4) // ヤ 30E4
+ZMK_UNICODE_SINGLE(ja_kata_yu, 	N3,N0, E,N6) // ユ 30E6
+ZMK_UNICODE_SINGLE(ja_kata_yo, 	N3,N0, E,N8) // ヨ 30E8
+ZMK_UNICODE_SINGLE(ja_kata_ra, 	N3,N0, E,N9) // ラ 30E9
+ZMK_UNICODE_SINGLE(ja_kata_ri, 	N3,N0, E, A) // リ 30EA
+ZMK_UNICODE_SINGLE(ja_kata_ru, 	N3,N0, E, B) // ル 30EB
+ZMK_UNICODE_SINGLE(ja_kata_re, 	N3,N0, E, C) // レ 30EC
+ZMK_UNICODE_SINGLE(ja_kata_ro, 	N3,N0, E, D) // ロ 30ED
+ZMK_UNICODE_SINGLE(ja_kata_wa, 	N3,N0, E, F) // ワ 30EF
+ZMK_UNICODE_SINGLE(ja_kata_wi, 	N3,N0, F,N0) // ヰ 30F0
+ZMK_UNICODE_SINGLE(ja_kata_we, 	N3,N0, F,N1) // ヱ 30F1
+ZMK_UNICODE_SINGLE(ja_kata_wo, 	N3,N0, F,N2) // ヲ 30F2
+ZMK_UNICODE_SINGLE(ja_kata_n, 	N3,N0, F,N3) // ン 30F3
+ZMK_UNICODE_SINGLE(ja_kata_vu, 	N3,N0, F,N4) // ヴ 30F4

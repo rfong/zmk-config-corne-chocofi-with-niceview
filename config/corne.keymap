@@ -8,6 +8,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// Must enable unicode language input in OS system preferences.
+#define HOST_OS 2
+// Set up ZMK helpers for language special characters
+#include "zmk-helpers/helper.h"
+// Source desired key-position labels
+#include "zmk-helpers/key-labels/36.h"
+// Source unicode-chars for desired languages
+#include "zmk-helpers/unicode-chars/japanese.dtsi"
+
 &mt {
     tapping-term-ms = <150>;
 };
